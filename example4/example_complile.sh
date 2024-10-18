@@ -1,0 +1,1 @@
+c++ -O3 -Wall -shared -std=c++11 -fPIC $(python3 -m pybind11 --includes) example4.cpp -o example4(python3-config --extension-suffix)
