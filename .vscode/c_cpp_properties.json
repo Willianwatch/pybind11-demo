@@ -1,22 +1,17 @@
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "$(python3 -m pybind11 --includes)",
-                "/home/yuandalong/apps/miniconda3/envs/torch2.3.0-cuda12/include/python3.10"
+                "/home/yuandalong/apps/miniconda3/envs/torch2.3.0-cuda12/include/python3.10",
+                "/home/yuandalong/apps/miniconda3/envs/torch2.3.0-cuda12/lib/python3.10/site-packages/pybind11/include"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "windowsSdkVersion": "10.0.19041.0",
-            "compilerPath": "cl.exe",
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "windows-msvc-x64"
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
         }
     ],
     "version": 4
