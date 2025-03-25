@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.14)
+project(MyCProject)
+
+# 明确指定Python3的Interpreter和Development组件[2,4](@ref)
+find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
+find_package(pybind11 REQUIRED)
+
+# 设置包含目录（根据实际路径调整）
+include_directories(include common)
+
+add_subdirectory(binding)
+
+# 收集所有源文件（包括common和src目录）
+file(GLOB COMMON_SOURCES "common/*.c")
+file(GLOB SRC_SOURCES "src/*.c")
+file(GLOB WRAPPER_SOURCES "binding/*.cpp")  # 添加binding目录的cpp文件
+
+# 添加Python扩展模块
+pybind11_add_module(MyPythonModule ${COMMON_SOURCES} ${SRC_SOURCES})
+
+# 链接Python库和pybind11模块
+target_link_libraries(MyMainModule PRIVATE Python3::Python pybind11::module)
+target_link_libraries(binding_target PRIVATE Python3::Python pybind11::module)  # 根据实际模块名调整

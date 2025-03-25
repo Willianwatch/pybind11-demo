@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "random": "c"
+    },
+    "cmake.sourceDirectory": "/home/yuandalong/code/pybind11-demo-github/pybind11-demo/dpc_rm"
+}
