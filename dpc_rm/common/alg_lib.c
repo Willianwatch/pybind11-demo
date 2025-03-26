@@ -4,9 +4,9 @@
 
 void print_2d_array(Frame frame)
 {
-    for (int i = 0; i < frame.height; i++) {
-        for (int j = 0; j < frame.width; j++) {
-            printf("%d ", frame.data[i * frame.width + j]);
+    for (int i = 0; i < frame.shape[0]; i++) {
+        for (int j = 0; j < frame.shape[1]; j++) {
+            printf("%03d ", frame.data[i * frame.shape[1] + j]);
         }
         printf("\n");
     }

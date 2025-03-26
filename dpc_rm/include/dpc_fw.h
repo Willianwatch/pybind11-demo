@@ -5,4 +5,6 @@
 
 int dpc_fw(Frame frame, int gamma_val);
 
+int dpc_fw_1(Frame *frame, int pow_val);
+
 #endif

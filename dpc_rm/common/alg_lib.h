@@ -13,6 +13,7 @@ typedef struct
     int width;
     int height;
     ushort *data;
+    int shape[2];
 } Frame;
 
 void print_2d_array(Frame frame);
